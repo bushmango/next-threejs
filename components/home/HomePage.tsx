@@ -24,7 +24,7 @@ function initScene() {
   cube.translateX(-2)
 
   var light = new THREE.PointLight(0xffffff, 1, 100)
-  light.position.set(5, 5, 5)
+  light.position.set(10, 10, 10)
   scene.add(light)
 
   camera.position.z = 5
@@ -34,7 +34,8 @@ function initScene() {
   loader.load(
     //'/ring.gltf',
     //'/TestRing.glb',
-    '/YellowTestRing.glb',
+    //'/YellowTestRing.glb',
+    '/TestRing2.glb',
     function (gltf) {
       gltfLoaded = gltf
 
