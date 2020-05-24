@@ -1,0 +1,6 @@
+.now
+.next
+yarn-error.log
+node_modules/
+
+.env
