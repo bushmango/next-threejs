@@ -28,7 +28,8 @@ function initScene() {
   var loader = new GLTFLoader()
   var gltfLoaded: any = null
   loader.load(
-    '/ring.gltf',
+    //'/ring.gltf',
+    '/TestRing.glb',
     function (gltf) {
       gltfLoaded = gltf
 
@@ -63,6 +64,7 @@ function initScene() {
       }
     }
 
+    renderer.setClearColor(0xff0000, 1)
     renderer.render(scene, camera)
   }
 
