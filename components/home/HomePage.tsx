@@ -22,6 +22,7 @@ function initScene() {
   var cube = new THREE.Mesh(geometry, material)
   scene.add(cube)
   cube.translateX(-2)
+  cube.translateY(-2)
 
   var light = new THREE.PointLight(0xffffff, 1, 100)
   light.position.set(10, 10, 10)
@@ -41,6 +42,24 @@ function initScene() {
 
       scene.add(gltf.scene)
       gltf.scene.translateX(2)
+    },
+    undefined,
+    function (error) {
+      console.error(error)
+    },
+  )
+
+  var gltfLoaded2: any = null
+  loader.load(
+    //'/ring.gltf',
+    //'/TestRing.glb',
+    //'/YellowTestRing.glb',
+    '/TestRing2.glb',
+    function (gltf) {
+      gltfLoaded2 = gltf
+
+      scene.add(gltf.scene)
+      gltf.scene.translateX(-2)
     },
     undefined,
     function (error) {
