@@ -23,13 +23,18 @@ function initScene() {
   scene.add(cube)
   cube.translateX(-2)
 
+  var light = new THREE.PointLight(0xffffff, 1, 100)
+  light.position.set(5, 5, 5)
+  scene.add(light)
+
   camera.position.z = 5
 
   var loader = new GLTFLoader()
   var gltfLoaded: any = null
   loader.load(
     //'/ring.gltf',
-    '/TestRing.glb',
+    //'/TestRing.glb',
+    '/YellowTestRing.glb',
     function (gltf) {
       gltfLoaded = gltf
 
